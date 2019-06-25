@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Q5o-HH-KnH">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Busca-->
+        <scene sceneID="IKK-s7-JRi">
+            <objects>
+                <viewController id="B5o-Nr-opB" customClass="MyHeroesViewController" customModule="doghero_test" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zbU-hp-wwH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ani-1k-FsJ">
+                                <rect key="frame" x="0.0" y="140" width="414" height="756"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="hVq-sd-3Ej">
+                                    <size key="itemSize" width="375" height="140"/>
+                                    <size key="headerReferenceSize" width="0.0" height="50"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="MyHeroesHeaderCollectionReusableView" id="Xng-Gw-AqM" customClass="MyHeroesHeaderCollectionReusableView" customModule="doghero_test" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtítulo Heróis" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2xr-tg-fH8">
+                                            <rect key="frame" x="12" y="24" width="112" height="14"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="14" id="sEa-Hy-TTy"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.41999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="2xr-tg-fH8" secondAttribute="trailing" constant="20" symbolic="YES" id="6pS-05-YXa"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="2xr-tg-fH8" secondAttribute="bottom" constant="4" id="VBF-Hq-Ksg"/>
+                                        <constraint firstItem="2xr-tg-fH8" firstAttribute="leading" secondItem="Xng-Gw-AqM" secondAttribute="leadingMargin" constant="4" id="c9h-rn-Kk2"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="labelHeroesHeader" destination="2xr-tg-fH8" id="4Xe-5U-FZ8"/>
+                                    </connections>
+                                </collectionReusableView>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="l2e-4c-KqI" firstAttribute="bottom" secondItem="Ani-1k-FsJ" secondAttribute="bottom" constant="-34" id="8UM-Qg-Yab"/>
+                            <constraint firstItem="Ani-1k-FsJ" firstAttribute="leading" secondItem="l2e-4c-KqI" secondAttribute="leading" id="Ocb-cr-RFs"/>
+                            <constraint firstItem="Ani-1k-FsJ" firstAttribute="top" secondItem="l2e-4c-KqI" secondAttribute="top" id="PzN-Jf-aRK"/>
+                            <constraint firstItem="l2e-4c-KqI" firstAttribute="trailing" secondItem="Ani-1k-FsJ" secondAttribute="trailing" id="hn1-7v-kX9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="l2e-4c-KqI"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Busca" id="An4-pJ-Ojs"/>
+                    <navigationItem key="navigationItem" id="QzJ-5j-uXf"/>
+                    <connections>
+                        <outlet property="collectionViewMyHeroes" destination="Ani-1k-FsJ" id="gX3-rj-B6C"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b9o-MD-Hhn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="405.79710144927537" y="-835.04464285714278"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="K2k-r9-f7E">
+            <objects>
+                <navigationController id="Q5o-HH-KnH" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="8iG-P3-WEG">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="B5o-Nr-opB" kind="relationship" relationship="rootViewController" id="Yec-1E-Yu2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kCY-4c-wy4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-860" y="-835"/>
+        </scene>
+    </scenes>
+</document>
